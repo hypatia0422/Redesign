@@ -1,0 +1,84 @@
+@@ -7,38 +7,24 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
+ /*Base styles*/
+ body {
+   font-family: sans-serif;
+-  background: url("images/tube.jpg") no-repeat center center fixed;
+-  background-size: cover;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+-header {
+-  font-family: arial, sans-serif;
+-  max-width: 10em;
+-  font-size: 3em;
+-  margin-bottom: .25em;
+-}
+-header img{
+-  width: 100%;
+-  margin-bottom: .25em;
+-}
+-
+-/*Layout*/
+-#loginwrapper {
++/*Classes for layout*/
++.wrapper {
+   background-color: rgba(10,10,10, .2);
+-  max-width: 40em;
+   padding: 2em;
+   border-radius: .5em;
+ }
+
+-#loginwrapper label {
++.wrapper label {
+   color: ghostwhite;
+ }
+
+-#loginwrapper input {
++.wrapper input {
+   color: white;
+   display: block;
+   margin: 1em 0;
+@@ -48,17 +34,33 @@ header img{
+   border-radius: .5em;
+ }
+
++/*Specific to certain pages*/
++.login {
++  max-width: 40em;
++}
+
+-/*Modules*/
++.logo {
++  font-family: arial, sans-serif;
++
++  font-size: 3em;
++  margin-bottom: .25em;
++  margin-bottom: .25em;
++}
++
++.logo img{
++   width: 100%;
++}
++
++.citybackground {
++  background: url("images/tube.jpg") no-repeat center center fixed;
++  background-size: cover;
++}
+
+
+-/*State*/
++/*For larger screens*/
+
+ @media screen and (min-width: 37.5em) {
+-  header {
+-    font-size: 5em;
+-  }
+
+-  #loginwrapper {
++  .wrapper {
+     margin: 2em;
+     border: 1px solid;
+   }
