@@ -1,57 +1,141 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
 /*css for portal portion */
+@font-face {
+  font-family: futura;
+  src: local("fonts/Futura/FUTURAB.TTF"),
+  local("fonts/Century Schoolbook/SCHLBKB.TTF");
+  font-weight: bold;
+}
 
 body{
   display:flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: space-around;
-  background-color: rgba(10,10,10, .2);
+  align-items: flex-end;
+  margin: 5em;
+  padding: .25em .5em;
 }
-
-/*Modules*/
-#loginwrapper{
-  background-image: url('iitlogo.png');
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+#mobile-container{
+  display: block;
+}
+#main-container{
+  display: none;
+}
+div.wrapper{
+  padding: .25em;
+}
+div.wrapper.login img{
   width: 100%;
   height: auto;
+
 }
 
-.modules{
-  background-color: rgba(254,250,254, .8);
+p{
+  font-family: 'Futura', arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.25em;
+  text-align: center;
+  padding: .25em;
+  margin: 1em auto .5em auto;
+  color: #000000;
+  text-shadow: 2px 2px 2px rgba(45, 45, 45, .75);;
+}
+
+/* CSS for the mobile portion  */
+div.ui-collapsible-content ul.ui-listview.ui-group-theme-a li.ui-first-child{
+  border-radius: 10px;
+  margin: .25em;
+}
+ div.ui-collapsible-content ul.ui-listview.ui-group-theme-a li{
+
+   margin: .25em;
+ }
+
+div.ui-collapsible-content ul.ui-listview.ui-group-theme-a li.ui-last-child{
+  border-radius: 10px;
+  margin: .25em;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading {
   margin: .5em;
-  padding: .5em;
-  width: 80%;
-  height: auto;
-
 }
-button{
-  display:none;
+.ui-li-static.ui-collapsible {
+  padding: .25em;
 }
-
-/*#academics{
-
-
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
+  border-top-width: .25em;
 }
-#finances{
-
-}
-#research{
-
-
-}
-#support{
-
-}
-#life{
-
-
+.ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content {
+  border-bottom-width: .25em;
 }
 
-#filler{
+@media screen and (min-width: 450px) {
+  #mobile-container {
+    display: none;
+  }
 
+  div#main-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
 
-}*/
+    background-image: url("images/iit.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .sections {
+    align-self: flex-end;
+    width: 35%;
+    height: auto;
+    margin: 1em;
+    padding: 1em 1em;
+    background-color: rgba(45, 45, 45, .5);
+    border-radius: 10px;
+
+    font-family: 'Futura', sans-serif;
+
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 1.5em;
+    color: #ffffff;
+  }
+
+  a {
+    display: block;
+    font-family: 'Century Schoolbook', sans-serif;
+    font-size: .85em;
+    line-height: 2em;
+    text-decoration: none;
+  }
+
+  div.sections:hover {
+    background-color: rgba(0,0,0, .5);
+  }
+  /* unvisited link */
+  a:link {
+    color: #ffffff;
+  }
+
+  /* visited link */
+  a:visited {
+    color: rgb(153, 0, 0);
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: rgb(0, 0, 100);
+    text-decoration: underline;
+  }
+}
